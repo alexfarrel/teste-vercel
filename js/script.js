@@ -67,10 +67,31 @@ document.addEventListener('DOMContentLoaded', () => {
       frame.classList.add('no-video');
       return;
     }
+
+    const reveal = () => frame.classList.add('loaded');
+
     video.addEventListener('error', () => frame.classList.add('no-video'));
-    video.addEventListener('canplaythrough', () => frame.classList.add('loaded'), { once: true });
-    // Safety net: some browsers/connections never fire canplaythrough reliably.
-    video.addEventListener('playing', () => frame.classList.add('loaded'), { once: true });
+    // Whichever of these fires first reveals the video — some browsers are
+    // slow/inconsistent about firing 'canplaythrough' or 'playing' on mobile.
+    video.addEventListener('loadeddata', reveal, { once: true });
+    video.addEventListener('canplaythrough', reveal, { once: true });
+    video.addEventListener('playing', reveal, { once: true });
+
+    // Some mobile browsers (notably Firefox/Chrome for Android with data-saving
+    // features on) delay fetching <video autoplay> until the page gets some kind
+    // of interaction. Calling .play() explicitly — instead of relying purely on
+    // the autoplay attribute — nudges those browsers to start loading right away.
+    const tryPlay = () => video.play().catch(() => {});
+    tryPlay();
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) tryPlay();
+    });
+
+    // Safety net: never let the loading overlay spin forever. If the video
+    // still hasn't reported readiness after 5s, reveal the frame anyway —
+    // the video keeps loading in the background and will simply pop in
+    // whenever it's actually ready, instead of hiding behind the spinner.
+    setTimeout(reveal, 5000);
   }
 
   const heroVideo = document.getElementById('heroVideo');
