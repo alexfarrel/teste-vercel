@@ -1,9 +1,484 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Teste</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edição de vídeo que transforma atenção em resultados</title>
+<meta name="description" content="Edição de vídeo profissional para criadores, YouTubers, infoprodutores e marcas que investem em anúncios. Cortes estratégicos, legendas dinâmicas e entrega no prazo.">
+
+<!-- SEO -->
+<meta name="keywords" content="editor de vídeo para anúncios, editor de vídeo para youtube, editor de vídeo profissional, editor de vídeos para criadores de conteúdo">
+<meta property="og:title" content="Edição de vídeo que transforma atenção em resultados">
+<meta property="og:description" content="Cortes estratégicos, legendas dinâmicas e acabamento profissional para quem vive de vídeo.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Funcionou!</h1>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#" class="logo" aria-label="Início">
+      <img src="https://ik.imagekit.io/vqrugbo5f/imagens-vendas/logo.svg" alt="Logo" class="logo__img">
+    </a>
+
+    <nav class="navbar__links">
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#processo">Processo</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <a href="https://wa.me/5522988283798" target="_blank" rel="noopener" class="btn btn--gold btn--small">Conversar</a>
+
+    <button class="navbar__burger" id="burger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="navbar__mobile" id="mobileMenu">
+    <a href="#servicos">Serviços</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#processo">Processo</a>
+    <a href="#depoimentos">Depoimentos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <div class="hero__text reveal">
+      <h1>Edição de vídeo que transforma atenção<br> em resultados.</h1>
+      <p class="hero__sub">Você já investe tempo criando conteúdo e dinheiro em anúncios. A última coisa que precisa é de uma edição que desperdice esse investimento.</p>
+      <div class="hero__actions">
+        <a href="https://wa.me/5522988283798" target="_blank" rel="noopener" class="btn btn--gold">Falar no WhatsApp</a>
+        <a href="#portfolio" class="btn btn--ghost">Ver trabalhos</a>
+      </div>
+    </div>
+
+    <div class="hero__media reveal">
+      <div class="hero__video-frame" id="heroFrame">
+        <video class="hero__video" id="heroVideo" autoplay muted loop playsinline poster="">
+          <source src="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783945107/hero-site2-1080_b6t2ol.webm" type="video/webm">
+          <source src="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783945107/hero-site2-1080_b6t2ol.mp4" type="video/mp4">
+        </video>
+        <div class="hero__video-loading" id="heroLoading" aria-hidden="true">
+          <span class="hero__spinner"></span>
+        </div>
+        <div class="hero__video-fallback" aria-hidden="true">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none"><circle cx="23" cy="23" r="22" stroke="#D6A94D" stroke-width="1"/><path d="M18 15L31 23L18 31V15Z" fill="#D6A94D"/></svg>
+          <span>Reel de portfólio aqui</span>
+        </div>
+        <div class="hero__progress"><div class="hero__progress-bar" id="heroProgress"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIMEIRA DOBRA — NÚMEROS ============ -->
+<section class="stats">
+  <div class="container stats__grid">
+    <div class="stat reveal">
+      <span class="stat__value" data-count="5" data-suffix="+">0</span>
+      <span class="stat__label">anos editando</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat__value" data-count="500" data-suffix="+">0</span>
+      <span class="stat__label">vídeos entregues</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat__value stat__value--text">Longo prazo</span>
+      <span class="stat__label">relação com clientes</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat__value" data-count="100" data-suffix="%">0</span>
+      <span class="stat__label">entrega personalizada</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEMA ============ -->
+<section class="problema" id="servicos">
+  <div class="container problema__grid">
+    <div class="problema__text reveal">
+      <span class="eyebrow">O custo invisível</span>
+      <h2>Seu tempo vale mais do que horas na timeline.</h2>
+      <p>Se você ainda edita seus próprios vídeos, provavelmente já percebeu o custo disso. Enquanto está ajustando cortes, sincronizando legendas ou procurando a música ideal, deixa de fazer aquilo que realmente gera crescimento: criar conteúdo, desenvolver estratégias, vender e acompanhar seu negócio.</p>
+      <p>Delegar a edição não é apenas ganhar tempo. É permitir que um especialista cuide de uma das partes mais importantes da comunicação da sua marca.</p>
+
+      <div class="funnel">
+        <div class="funnel__step reveal">Perdendo tempo editando</div>
+        <div class="funnel__arrow" aria-hidden="true">↓</div>
+        <div class="funnel__step reveal">Publicando sem qualidade</div>
+        <div class="funnel__arrow" aria-hidden="true">↓</div>
+        <div class="funnel__step funnel__step--end reveal">Desperdiçando potencial</div>
+      </div>
+    </div>
+
+    <div class="problema__media reveal">
+      <div class="hero__video-frame hero__video-frame--landscape" id="problemaFrame">
+        <video class="hero__video" id="problemaVideo" autoplay muted loop playsinline poster="">
+          <source src="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783945107/timelap2-1080_vgjyuh.webm" type="video/webm">
+          <source src="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783945107/timelap2-1080_vgjyuh.mp4" type="video/mp4">
+        </video>
+        <div class="hero__video-loading" aria-hidden="true">
+          <span class="hero__spinner"></span>
+        </div>
+        <div class="hero__video-fallback" aria-hidden="true">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none"><circle cx="23" cy="23" r="22" stroke="#D6A94D" stroke-width="1"/><path d="M18 15L31 23L18 31V15Z" fill="#D6A94D"/></svg>
+          <span>Vídeo de exemplo aqui</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFÍCIOS ============ -->
+<section class="beneficios">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por que isso importa</span>
+      <h2>Uma boa edição não serve apenas para deixar o vídeo bonito.</h2>
+      <p>Ela existe para prender atenção. Cada corte, legenda, efeito sonoro, transição e trilha são escolhidos com um propósito: manter o público assistindo e aumentar as chances de alcançar melhores resultados. Sem exageros, sem efeitos desnecessários — cada elemento é utilizado de forma estratégica para o seu nicho e para o objetivo do vídeo.</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card reveal">
+        <span class="card__icon" data-lucide="clock"></span>
+        <h3>Mais tempo</h3>
+        <p>Recupere as horas que hoje vão para a timeline e devolva-as ao seu negócio.</p>
+      </div>
+      <div class="card reveal">
+        <span class="card__icon" data-lucide="repeat"></span>
+        <h3>Mais consistência</h3>
+        <p>Conteúdo publicado com regularidade, sem depender do seu tempo livre.</p>
+      </div>
+      <div class="card reveal">
+        <span class="card__icon" data-lucide="eye"></span>
+        <h3>Mais retenção</h3>
+        <p>Cortes e ritmo pensados para manter o público assistindo até o fim.</p>
+      </div>
+      <div class="card reveal">
+        <span class="card__icon" data-lucide="shield-check"></span>
+        <h3>Mais tranquilidade</h3>
+        <p>Um processo claro, com revisões e prazos combinados desde o início.</p>
+      </div>
+    </div>
+
+    <div class="included reveal">
+      <h3>O que você recebe</h3>
+      <ul class="included__list">
+        <li><span data-lucide="check"></span> Edição dinâmica e personalizada</li>
+        <li><span data-lucide="check"></span> Cortes estratégicos</li>
+        <li><span data-lucide="check"></span> Legendas dinâmicas</li>
+        <li><span data-lucide="check"></span> Efeitos sonoros</li>
+        <li><span data-lucide="check"></span> Trilha sonora adequada ao conteúdo</li>
+        <li><span data-lucide="check"></span> Transições na medida certa</li>
+        <li><span data-lucide="check"></span> Dois ciclos de revisão</li>
+        <li><span data-lucide="check"></span> Arquivos organizados em Drive</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFÓLIO ============ -->
+<section class="portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Trabalhos recentes</span>
+      <h2>Cada projeto é editado conforme o estilo da sua marca.</h2>
+    </div>
+
+  </div>
+
+  <div class="portfolio__scroll reveal">
+    <button class="portfolio__item"
+      data-video="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783936426/Equipe_Sem_Limites_Jhow_SFI2026_3_kszvlx.webm">
+      <img class="portfolio__thumb-img" loading="lazy" alt="Sem Limites — Reel"
+        src="https://ik.imagekit.io/vqrugbo5f/imagens-vendas/thumbnails%20verticais%20SEM%20LIMITES.webp">
+      <span class="portfolio__format">Reel</span>
+      <span class="portfolio__label">Sem Limites</span>
+    </button>
+    <button class="portfolio__item"
+      data-video="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783936419/dener-criativo-pd-2026-06-19_1_ohv1zr.webm">
+      <img class="portfolio__thumb-img" loading="lazy" alt="Dener Podcast — Ad"
+        src="https://ik.imagekit.io/vqrugbo5f/imagens-vendas/thumbnails%20PODDENER.webp">
+      <span class="portfolio__format">Ad</span>
+      <span class="portfolio__label">Dener Podcast</span>
+    </button>
+    <button class="portfolio__item"
+      data-video="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783936419/AB-2026-05-29_Intro_2_cjlvkd.webm">
+      <img class="portfolio__thumb-img" loading="lazy" alt="AB SPA — Ad"
+        src="https://ik.imagekit.io/vqrugbo5f/imagens-vendas/thumbnails%20verticais%20AB%20SPA.webp">
+      <span class="portfolio__format">Ad</span>
+      <span class="portfolio__label">AB SPA</span>
+    </button>
+    <button class="portfolio__item"
+      data-video="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783936419/Influencers_A%C3%A7%C3%A3o_Social_-_Balne%C3%A1rio_Cambori%C3%BA_SC_g22ulm.webm">
+      <img class="portfolio__thumb-img" loading="lazy" alt="Ação BC — Reel"
+        src="https://ik.imagekit.io/vqrugbo5f/imagens-vendas/acaosocial%20bc.webp">
+      <span class="portfolio__format">Reel</span>
+      <span class="portfolio__label">Ação BC</span>
+    </button>
+    <button class="portfolio__item"
+      data-video="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783936420/feij%C3%A3o_junho_2026-chefe_kx1dvj.webm">
+      <img class="portfolio__thumb-img" loading="lazy" alt="Feijão — Story"
+        src="https://ik.imagekit.io/vqrugbo5f/imagens-vendas/thumbnails%20verticais%20feijao.webp">
+      <span class="portfolio__format">Story</span>
+      <span class="portfolio__label">Feijão</span>
+    </button>
+    <button class="portfolio__item"
+      data-video="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783936424/EDYBlack_2_jspsqm.webm">
+      <img class="portfolio__thumb-img" loading="lazy" alt="Noivas — Short"
+        src="https://ik.imagekit.io/vqrugbo5f/imagens-vendas/thumbnails%20verticais%20edy%20noivas.webp">
+      <span class="portfolio__format">Short</span>
+      <span class="portfolio__label">Noivas</span>
+    </button>
+    <button class="portfolio__item"
+      data-video="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783936424/aeu_-_2026-05-14_-_sorteio_2_tnzld8.webm">
+      <img class="portfolio__thumb-img" loading="lazy" alt="União — Reel"
+        src="https://ik.imagekit.io/vqrugbo5f/imagens-vendas/thumbnails%20uni%C3%A3o.webp">
+      <span class="portfolio__format">Reel</span>
+      <span class="portfolio__label">União</span>
+    </button>
+    <button class="portfolio__item"
+      data-video="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783936418/dener-criativos-2026-07-02_10_vvypqe.webm">
+      <img class="portfolio__thumb-img" loading="lazy" alt="Dener Esse ou Esse — Ad"
+        src="https://ik.imagekit.io/vqrugbo5f/imagens-vendas/thumbnails%20ads%20dener.webp">
+      <span class="portfolio__format">Ad</span>
+      <span class="portfolio__label">Dener Esse ou Esse</span>
+    </button>
+    <button class="portfolio__item"
+      data-video="https://res.cloudinary.com/ds7u1zwuq/video/upload/v1783936419/Artistas_-_Part._Mc_Melody_Mirella_McBinn_Mc_Don_Juan_Menor_da_VG_f00hzf.webm">
+      <img class="portfolio__thumb-img" loading="lazy" alt="MCs — Reel"
+        src="https://ik.imagekit.io/vqrugbo5f/imagens-vendas/proj4-vid1.webp">
+      <span class="portfolio__format">Reel</span>
+      <span class="portfolio__label">MCs</span>
+    </button>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section class="depoimentos" id="depoimentos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Resultados que meus clientes relatam</span>
+      <h2>Confiança construída entrega após entrega.</h2>
+    </div>
+
+    <div class="results-grid reveal">
+      <div class="result"><span data-lucide="trending-up"></span> Maior retenção dos vídeos</div>
+      <div class="result"><span data-lucide="target"></span> Melhor desempenho em campanhas quando combinado com uma boa oferta</div>
+      <div class="result"><span data-lucide="calendar-check"></span> Produção de conteúdo mais consistente</div>
+      <div class="result"><span data-lucide="heart-handshake"></span> Relacionamentos de longo prazo, baseados em confiança e qualidade</div>
+    </div>
+
+    <div class="testimonial-slider reveal">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-slide">
+          <p class="testimonial-quote">“...obrigado pelo trabalho que vem sendo feito, trabalho perfeito era oque eu queria pra loja e não sabia como fazer. Sua parte na empresa é essencial.”</p>
+          <div class="testimonial-author">
+             <img class="testimonial-avatar" src="https://ik.imagekit.io/vqrugbo5f/port-images/clients/client-luis-feijao.jpg?updatedAt=1778625182498" alt="Luis Fernando Cabral">
+            <div>
+              <strong>Luis Fernando Cabral</strong>
+              <span>Feijão Auto Peças</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <p class="testimonial-quote">“seus vídeos ficaram tão bons que não sei qual escolher para publicar essa semana, obrigado pela parceria e comprometimento”</p>
+          <div class="testimonial-author">
+             <img class="testimonial-avatar" src="https://ik.imagekit.io/vqrugbo5f/port-images/clients/Captura%20de%20tela%202026-07-13%20233842.png" alt="Lucas Ricardo">
+            <div>
+              <strong>Lucas Ricardo</strong>
+              <span>Mayday Produções / Marketing</span>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="testimonial-slide">
+          <div class="testimonial-whatsapp">
+            <span data-lucide="message-circle"></span>
+            <p>Espaço reservado para um print real de conversa no WhatsApp — gera confiança extra quando combinado com depoimentos em texto.</p>
+          </div>-->
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots"></div> 
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESSO ============ -->
+<section class="processo" id="processo">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Um processo simples, do briefing à entrega.</h2>
+    </div>
+
+    <div class="process-line reveal">
+      <div class="process-step">
+        <span class="process-step__num">①</span>
+        <h3>Briefing</h3>
+        <p>Você envia o material e as referências.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step__num">②</span>
+        <h3>Arquivos</h3>
+        <p>Organização do material bruto para edição.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step__num">③</span>
+        <h3>Edição</h3>
+        <p>Cada vídeo é desenvolvido de acordo com seus objetivos e linguagem.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step__num">④</span>
+        <h3>Revisões</h3>
+        <p>Você recebe uma prévia e pode solicitar até duas revisões.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step__num">⑤</span>
+        <h3>Entrega</h3>
+        <p>Arquivos finais disponibilizados em Drive, prontos para publicação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIFERENCIAIS ============ -->
+<section class="diferenciais">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">A diferença</span>
+      <h2>O que muda quando a edição é estratégica.</h2>
+    </div>
+
+    <div class="compare reveal">
+      <div class="compare__header">
+        <span></span>
+        <span class="compare__col compare__col--other">Outros editores</span>
+        <span class="compare__col compare__col--you">Este serviço</span>
+      </div>
+
+      <div class="compare__row">
+        <span class="compare__label">Uso de efeitos</span>
+        <span class="compare__cell compare__cell--no"><span data-lucide="x"></span> Enchem o vídeo de efeitos</span>
+        <span class="compare__cell compare__cell--yes"><span data-lucide="check"></span> Cada efeito tem um propósito</span>
+      </div>
+      <div class="compare__row">
+        <span class="compare__label">Trilha sonora</span>
+        <span class="compare__cell compare__cell--no"><span data-lucide="x"></span> Entregam qualquer trilha</span>
+        <span class="compare__cell compare__cell--yes"><span data-lucide="check"></span> Escolhe trilhas que reforçam o ritmo</span>
+      </div>
+      <div class="compare__row">
+        <span class="compare__label">Comunicação</span>
+        <span class="compare__cell compare__cell--no"><span data-lucide="x"></span> Pouca comunicação</span>
+        <span class="compare__cell compare__cell--yes"><span data-lucide="check"></span> Processo claro do início ao fim</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ FAQ ============ -->
+<section class="faq">
+  <div class="container container--narrow">
+    <div class="section-head reveal">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2>Antes de conversar</h2>
+    </div>
+
+    <div class="accordion reveal">
+      <div class="accordion__item">
+        <button class="accordion__trigger">Você edita no meu estilo?<span data-lucide="plus"></span></button>
+        <div class="accordion__panel"><p>Sim. As referências são justamente para garantir que a edição siga a identidade do seu conteúdo.</p></div>
+      </div>
+      <div class="accordion__item">
+        <button class="accordion__trigger">Preciso explicar tudo detalhadamente?<span data-lucide="plus"></span></button>
+        <div class="accordion__panel"><p>Não. Na maioria dos casos, o material e algumas referências já são suficientes para iniciar.</p></div>
+      </div>
+      <div class="accordion__item">
+        <button class="accordion__trigger">Quanto tempo demora?<span data-lucide="plus"></span></button>
+        <div class="accordion__panel"><p>O prazo varia conforme a complexidade do projeto, mas sempre é alinhado antes do início do trabalho.</p></div>
+      </div>
+      <div class="accordion__item">
+        <button class="accordion__trigger">Quantas revisões estão incluídas?<span data-lucide="plus"></span></button>
+        <div class="accordion__panel"><p>Até duas revisões sem custo adicional.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final" id="contato">
+  <div class="container reveal">
+    <h2>Pronto para parar de editar e<br> voltar a cuidar do seu negócio?</h2>
+    <a href="https://wa.me/5522988283798" target="_blank" rel="noopener" class="btn btn--gold btn--large">Conversar no WhatsApp</a>
+  </div>
+</section>
+
+<!-- ============ RODAPÉ ============ -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#" class="logo">
+        <img src="https://ik.imagekit.io/vqrugbo5f/imagens-vendas/logo.svg" alt="Logo" class="logo__img">
+      </a>
+    </div>
+
+    <div class="footer__col">
+      <span class="footer__col-title">Contato</span>
+      <ul class="footer__list">
+        <li><a href="mailto:contato@alexandreoliveira.sbs">E-mail</a></li>
+        <li><a href="https://discord.com/users/442459034314866688" target="_blank" rel="noopener">Discord</a></li>
+        <li><a href="https://t.me/alexfarrel/" target="_blank" rel="noopener">Telegram</a></li>
+        <li><a href="https://wa.me/5522988283798" target="_blank" rel="noopener">WhatsApp</a></li>
+        
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <span class="footer__col-title">Legal</span>
+      <ul class="footer__list">
+        <li><a href="termos-de-uso.html">Termos de uso</a></li>
+        <li><a href="politica-de-privacidade.html">Política de privacidade</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <span class="footer__copy">CNPJ: 36.982.755/0001-86</span><br>
+    <span class="footer__copy">© <span id="year"></span> Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+<!-- ============ AVISO DE COOKIES ============ -->
+<div class="cookie-bar" id="cookieBar">
+  <p>Este site usa cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p>
+  <button class="btn btn--gold btn--small" id="cookieAccept">Entendi</button>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">
+    <span data-lucide="x"></span>
+  </button>
+  <div class="lightbox__content">
+    <video id="lightboxVideo" controls playsinline controlsList="nodownload noremoteplayback" disablePictureInPicture>
+      <source id="lightboxSourceWebm" type="video/webm">
+      <source id="lightboxSourceMp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
