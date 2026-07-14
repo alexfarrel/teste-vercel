@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/404.html"
+    },
+    {
+      "source": "/wp-login.php",
+      "destination": "/404.html"
+    },
+    {
+      "source": "/xmlrpc.php",
+      "destination": "/404.html"
+    },
+    {
+      "source": "/phpmyadmin/:path*",
+      "destination": "/404.html"
+    },
+    {
+      "source": "/admin/:path*",
+      "destination": "/404.html"
+    }
+  ]
+}
