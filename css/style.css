@@ -310,6 +310,18 @@ section { padding: 120px 0; }
   .hero__media { order: -1; max-width: 360px; margin: 0 auto; }
 }
 
+.hero__media--fade {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroMediaFade 600ms var(--ease) 150ms forwards;
+}
+@keyframes heroMediaFade {
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero__media--fade { animation: none; opacity: 1; transform: none; }
+}
+
 /* ==========================================================================
    STATS
    ========================================================================== */
